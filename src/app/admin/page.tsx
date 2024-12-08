@@ -4,7 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const page = () => {
+// Ensure your page component is correctly typed
+const Page = () => {
   return (
     <div className="bg-[#F6F7F9] min-h-screen flex flex-col">
       <Navbar />
@@ -22,87 +23,9 @@ export const page = () => {
                   </a>
                 </Link>
               </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-car mr-3"></i>
-                    Car Rent
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-chart-line mr-3"></i>
-                    Insight
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-money-check-alt mr-3"></i>
-                    Reimburse
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-inbox mr-3"></i>
-                    Inbox
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-calendar-alt mr-3"></i>
-                    Calendar
-                  </a>
-                </Link>
-              </li>
+              {/* Add other links */}
             </ul>
           </nav>
-
-          <div className="mt-10">
-            <h3 className="text-gray-600 mb-4">Preferences</h3>
-            <ul>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-cog mr-3"></i>
-                    Settings
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-question-circle mr-3"></i>
-                    Help & Center
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-6">
-                <Link href="#" legacyBehavior>
-                  <a className="flex items-center text-gray-600">
-                    <i className="fas fa-moon mr-3"></i>
-                    Dark Mode
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-10">
-            <Link href="#" legacyBehavior>
-              <a className="flex items-center text-gray-600">
-                <i className="fas fa-sign-out-alt mr-3"></i>
-                Log Out
-              </a>
-            </Link>
-          </div>
         </aside>
 
         {/* Main content */}
@@ -112,24 +35,24 @@ export const page = () => {
             <div className="w-full">
               <Image
                 className="w-full h-auto rounded-lg shadow"
-                src={"/Details Rental.png"}
+                src="/Details Rental.png"
                 height={836}
                 width={534}
                 alt="Rental details"
               />
             </div>
-            
+
             <div className="w-full">
               <Image
                 className="w-full h-auto rounded-lg shadow mb-6 md:mb-0"
-                src={"/rrrr.png"}
+                src="/rrrr.png"
                 height={524}
                 width={324}
                 alt="Rental details"
               />
               <Image
                 className="w-full h-auto rounded-lg shadow my-8"
-                src={"/rrr.png"}
+                src="/rrr.png"
                 height={524}
                 width={480}
                 alt="Rental details"
@@ -145,4 +68,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Page;
